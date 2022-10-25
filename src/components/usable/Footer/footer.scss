@@ -1,0 +1,74 @@
+@import '../../../assets/colors';
+
+.footer {
+  padding: 70px 0;
+  min-width: 375px;
+  @media (max-width: 800px) {
+    padding: 20px 0;
+  }
+
+
+  &__info {
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+    margin-bottom: 20px;
+    @media (max-width: 800px) {
+      flex-wrap: wrap;
+      padding: 10px 15px;
+      &-box {
+        width: 100% !important;
+      }
+    }
+
+    &-box {
+      width: 50%;
+
+      .footer__title {
+        font-size: 32px;
+        font-weight: 900;
+        margin-bottom: 50px;
+      }
+    }
+
+    &-box:first-child {
+      .footer__title {
+        span {
+          color: $crimson;
+        }
+      }
+    }
+
+    &-box:last-child {
+      .footer__title {
+        span {
+          color: $bluryellow;
+        }
+      }
+
+      .footer__list {
+        list-style: none;
+
+        li {
+          font-size: 14px;
+          letter-spacing: 2px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+  }
+
+  &__creator {
+    text-align: center;
+
+    &-descr {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 25px;
+    }
+  }
+}

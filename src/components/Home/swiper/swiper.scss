@@ -1,0 +1,116 @@
+@import '../../../assets/colors';
+
+.carousel {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 200px 0;
+  min-width: 375px;
+  @media (max-width: 800px) {
+    padding: 100px 0;
+  }
+  @media (max-width: 600px) {
+    padding: 50px 0;
+  }
+  @media (max-width: 425px) {
+    padding: 10px 0;
+  }
+
+  &__wrapper {
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+
+    &-item {
+      margin: 0 auto;
+      min-height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      @media (max-width: 800px) {
+        flex-direction: column;
+        &--image, &--text {
+          width: 90% !important;
+        }
+      }
+
+
+      &--image {
+        width: 40%;
+
+        &-img {
+          cursor: pointer;
+          width: 100%;
+          max-height: 500px;
+          object-fit: contain;
+          transition: all .3s ease-in-out;
+          filter: grayscale(1);
+          @media (max-width: 600px) {
+            filter: grayscale(0);
+          }
+
+          &:hover {
+            filter: grayscale(0);
+          }
+        }
+      }
+
+      &--text {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &-title {
+          font-size: 48px;
+          font-weight: 900;
+          letter-spacing: 2px;
+          margin-bottom: 20px;
+        }
+
+        &-type {
+          padding-left: 20px;
+          border-left: 4px solid yellow;
+          margin-bottom: 30px;
+        }
+
+        &-descr {
+          font-size: 20px;
+          letter-spacing: 2px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 26px;
+  color: white;
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: $white;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: $bluryellow;
+}
+
+.swiper-pagination {
+  @media (min-width: 600px) {
+    display: none;
+  }
+}

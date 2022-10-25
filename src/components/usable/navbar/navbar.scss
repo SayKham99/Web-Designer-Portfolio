@@ -1,0 +1,121 @@
+.navbar {
+  margin: 0 auto;
+  width: 100%;
+  background-color: transparent;
+  z-index: 2;
+  min-width: 375px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-logo {
+      color: white;
+      mix-blend-mode: difference;
+      font-size: 20px;
+      font-weight: 600;
+      z-index: 3;
+      transition: all .3s ease-in-out;
+      letter-spacing: 8px;
+      padding: 0 0 0 20px;
+
+      &:hover {
+        letter-spacing: 30px;
+      }
+    }
+
+    &-menu {
+      z-index: 3;
+      margin: 10px;
+    }
+
+    &-sidebar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #cbcb33;
+    }
+
+    .hamburger {
+      color: black;
+      justify-content: center;
+      align-items: center;
+
+      &__wrapper {
+        margin: 0 auto;
+        max-width: 60%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 100px;
+
+        &-list {
+          width: 45%;
+
+          &--wrapper {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            row-gap: 35px;
+
+            li {
+              font-weight: 700;
+              font-size: 40px;
+              transition: all .3s ease-in-out;
+            }
+          }
+        }
+
+        &-text {
+          width: 50%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+          row-gap: 15px;
+          @media (max-width: 800px) {
+            display: none;
+          }
+
+          &--title {
+
+          }
+
+          &--descr {
+            font-size: 22px;
+            font-weight: 400;
+          }
+
+          &--link {
+            color: black;
+            font-size: 22px;
+            font-weight: 400;
+            text-decoration: none;
+            margin-bottom: 20px;
+          }
+
+          &--btn {
+            cursor: pointer;
+            padding: 8px 16px;
+            border: 2px solid black;
+            background-color: transparent;
+            font-size: 18px;
+            font-weight: 500;
+
+            &:hover {
+              background-color: black;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.active{
+  text-decoration: line-through;
+}

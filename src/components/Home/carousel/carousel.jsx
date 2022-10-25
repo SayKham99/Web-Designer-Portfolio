@@ -1,75 +1,75 @@
 import React, {useEffect, useState} from 'react';
 import './carousel.scss'
-import photo1 from '../../assets/pic1.jpg'
-import photo2 from '../../assets/pic2.jpg'
-import photo3 from '../../assets/pic3.jpg'
-import photo4 from '../../assets/pic4.jpg'
-import photo5 from '../../assets/pic5.jpg'
-import photo6 from '../../assets/pic6.jpg'
-import photo7 from '../../assets/pic7.jpg'
-import photo8 from '../../assets/pic8.jpg'
-import photo9 from '../../assets/pic9.jpg'
+import photo1 from '../../../assets/images/pic1.jpg'
+import photo2 from '../../../assets/images/pic2.jpg'
+import photo3 from '../../../assets/images/pic3.jpg'
+import photo4 from '../../../assets/images/pic4.jpg'
+import photo5 from '../../../assets/images/pic5.jpg'
+import photo6 from '../../../assets/images/pic6.jpg'
+import photo7 from '../../../assets/images/pic7.jpg'
+import photo8 from '../../../assets/images/pic8.jpg'
+import photo9 from '../../../assets/images/pic9.jpg'
 
 const data = [
     {
         id: 1,
-        title: 'Interactions Magicians.',
-        type: 'Animated Interaction',
+        title: 'Hokim Akademiyasi',
+        type: 'Application Design',
         descr: 'Animation concepts for the Magicians microsite promoting the series.',
         image: photo1,
     },
     {
         id: 2,
-        title: 'Interactions Magicians.',
+        title: 'MedArt Group Clinic',
         type: 'Animated Interaction',
         descr: 'Animation concepts for the Magicians microsite promoting the series.',
         image: photo2,
     },
     {
         id: 3,
-        title: 'Interactions Magicians.',
-        type: 'Animated Interaction',
+        title: 'Skerio',
+        type: 'Application Design',
         descr: 'Animation concepts for the Magicians microsite promoting the series.',
         image: photo3,
     },
     {
         id: 4,
-        title: 'Interactions Magicians.',
-        type: 'Animated Interaction',
+        title: 'e-Commerce',
+        type: 'Application Design',
         descr: 'Animation concepts for the Magicians microsite promoting the series.',
         image: photo4,
     },
     {
         id: 5,
-        title: 'Interactions Magicians.',
+        title: 'Mavouranahr Travel Agency',
         type: 'Animated Interaction',
         descr: 'Animation concepts for the Magicians microsite promoting the series.',
         image: photo5,
     },
     {
         id: 6,
-        title: 'Interactions Magicians.',
-        type: 'Animated Interaction',
+        title: 'Skerio',
+        type: 'WebSite Design',
         descr: 'Animation concepts for the Magicians microsite promoting the series.',
         image: photo6,
     },
     {
         id: 7,
-        title: 'Interactions Magicians.',
-        type: 'Animated Interaction',
+        title: 'MedArt Group Clinic',
+        type: 'Website',
         descr: 'Animation concepts for the Magicians microsite promoting the series.',
         image: photo7,
     },
     {
         id: 8,
-        title: 'Interactions Magicians.',
-        type: 'Animated Interaction',
+        title: 'AFC',
+        type: 'WebSite Design',
         descr: 'Animation concepts for the Magicians microsite promoting the series.',
         image: photo8,
     },
     {
         id: 9,
-        title: 'Interactions Magicians.',
+        title: 'Global Academy',
         type: 'Animated Interaction',
         descr: 'Animation concepts for the Magicians microsite promoting the series.',
         image: photo9,
