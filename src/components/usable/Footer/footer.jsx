@@ -3,17 +3,17 @@ import './footer.scss'
 import Container from "../Container/Container";
 import Button from "../button/button";
 
-function Footer() {
+function Footer({color}) {
     return (
-        <footer className='footer'>
-            <Container>
+        <footer className='footer' style={{backgroundColor:!color ? 'black' : '#CCCC33',color:!color ? "white" : "black"}}>
+            <Container className={'-xs'}>
                 <div className='footer__info'>
                     <div className='footer__info-box'>
-                        <h2 className='footer__title'>Let’s design something <br/> <span>together?</span></h2>
-                        <Button children={'Contact Me'} url={'/contact'}/>
+                        <h2 className='footer__title' style={{color:!color ? '#fff' : 'black'}}>Let’s design something <br/> <span style={{color:!color ? '#CCCC33' : 'black'}}>together?</span></h2>
+                        <Button color={color} textcolor={color} children={'Contact Me'} url={'/contact'}/>
                     </div>
                     <div className='footer__info-box'>
-                        <h2 className='footer__title'>You can find me on <span>social media</span>:</h2>
+                        <h2 className='footer__title' style={{color:!color ? '#fff' : 'black'}}>You can find me on <span style={{color:!color ? '#DF284C' : 'black'}}>social media</span>:</h2>
                         <ul className='footer__list'>
                             <li>Linkedin</li>
                             <li>Telegram</li>

@@ -1,6 +1,7 @@
 @import '../../../assets/colors';
 
 .footer {
+  width: 100%;
   padding: 70px 0;
   min-width: 375px;
   @media (max-width: 800px) {
@@ -32,22 +33,7 @@
         margin-bottom: 50px;
       }
     }
-
-    &-box:first-child {
-      .footer__title {
-        span {
-          color: $crimson;
-        }
-      }
-    }
-
     &-box:last-child {
-      .footer__title {
-        span {
-          color: $bluryellow;
-        }
-      }
-
       .footer__list {
         list-style: none;
 

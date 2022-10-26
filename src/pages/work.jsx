@@ -1,10 +1,13 @@
 import React from 'react';
 import Layout from "../layout/layout";
+import WorkHeader from "../components/Work/header/workHeader";
+import Projects from "../components/Work/projects/projects";
 
 function Work() {
     return (
         <Layout>
-            <h1>Work</h1>
+            <WorkHeader/>
+            <Projects/>
         </Layout>
     );
 }

@@ -1,0 +1,44 @@
+@import '../../../assets/colors';
+
+.aboutICan {
+  padding: 70px 20px;
+  background-color: $white;
+  min-width: 375px;
+  @media (max-width: 800px) {
+    padding: 20px 0;
+  }
+  &__wrapper {
+    &-title {
+      color: $black;
+      margin-bottom: 40px;
+    }
+
+    &-items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 50px;
+
+      &--item {
+        width: 30%;
+        @media (max-width: 800px) {
+          width: 100%;
+        }
+
+        .item__title {
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 10px;
+          color: $crimson;
+        }
+
+        .item__descr {
+          font-size: 18px;
+          font-weight: 600;
+          color: $black;
+        }
+      }
+    }
+  }
+}

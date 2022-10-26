@@ -1,10 +1,13 @@
 import React from 'react';
 import Layout from "../layout/layout";
+import BlogHeader from "../components/Blog/header/blogHeader";
+import Posts from "../components/Blog/posts/posts";
 
 function Blog() {
     return (
         <Layout>
-            <h1>Blog</h1>
+            <BlogHeader/>
+            <Posts/>
         </Layout>
     );
 }

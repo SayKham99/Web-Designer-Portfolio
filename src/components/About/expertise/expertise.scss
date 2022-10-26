@@ -1,0 +1,55 @@
+@import "../../../assets/colors";
+
+.expertise {
+  padding: 70px 10px;
+  background-color: $white;
+  min-width: 375px;
+  @media (max-width: 800px) {
+    padding: 20px 0;
+  }
+
+  &__title {
+    color: $black;
+    margin-bottom: 40px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-image {
+      width: 600px;
+      margin-left: -300px;
+      @media (max-width: 800px) {
+        display: none;
+      }
+    }
+
+    &-items {
+      width: 50%;
+      @media (max-width: 800px) {
+        width: 100%;
+      }
+
+      &--item {
+        width: 100%;
+        margin-bottom: 50px;
+
+        .item__title {
+          font-size: 24px;
+          font-weight: 600;
+          margin-bottom: 20px;
+          color: $crimson;
+        }
+
+        .item__descr {
+          font-size: 22px;
+          font-weight: 500;
+          color: $black;
+        }
+      }
+
+    }
+  }
+}

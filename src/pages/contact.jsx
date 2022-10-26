@@ -1,10 +1,11 @@
 import React from 'react';
 import Layout from "../layout/layout";
+import ContactHeader from "../components/Contact/contactHeader/contactHeader";
 
 function Contact() {
     return (
-        <Layout>
-            <h1>Contact</h1>
+        <Layout color={true}>
+            <ContactHeader/>
         </Layout>
     );
 }

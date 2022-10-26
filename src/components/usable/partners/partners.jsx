@@ -1,6 +1,6 @@
 import React from 'react';
 import './partners.scss'
-import Container from "../../usable/Container/Container";
+import Container from "../Container/Container";
 
 import photo1 from '../../../assets/images/partner1.png'
 import photo2 from '../../../assets/images/partner2.png'
