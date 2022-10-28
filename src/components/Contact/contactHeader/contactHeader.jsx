@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import Container from "../../usable/Container/Container";
+import {Container} from "../../usable/Container/Container";
 import './contactHeader.scss'
 import Button from "../../usable/button/button";
+import {motion} from "framer-motion";
 
 const ican = [{
     id: 1,
@@ -37,17 +38,22 @@ function ContactHeader() {
         <Container className={'-xs'}>
             <div className='contactHeader__wrapper-item'>
                 <div className='contactHeader__wrapper-item--text'>
-                    <h1 className='contactHeader__wrapper-item--text-title'>Let’s find solutions <span>together?</span>
-                    </h1>
-                    <p className='contactHeader__wrapper-item--text-type'>Contact</p>
-                    <p className='contactHeader__wrapper-item--text-descr'>Fill in the form or just use my contacts
-                        below. If you need to put a project on the move, let’s work on it!</p>
-                    <a className='contactHeader__wrapper-item--text-link'
-                       href="mailto:example@example.com">example@example.com</a>
+                    <motion.h1 initial={{y: "-30px", opacity: 0}}
+                               animate={{y: 0, opacity: 1, transition: {ease: "easeIn", delay: .5}}} className='contactHeader__wrapper-item--text-title'>Let’s find solutions <span>together?</span>
+                    </motion.h1>
+                    <motion.p initial={{x: "-50px", opacity: 0}}
+                              animate={{x: 0, opacity: 1, transition: {ease: "easeIn", delay: .5}}} className='contactHeader__wrapper-item--text-type'>Contact</motion.p>
+                    <motion.p initial={{y: "30px", opacity: 0}}
+                              animate={{y: 0, opacity: 1, transition: {ease: "easeIn", delay: .5}}} className='contactHeader__wrapper-item--text-descr'>Fill in the form or just use my contacts
+                        below. If you need to put a project on the move, let’s work on it!</motion.p>
+                    <motion.a initial={{y: "30px", opacity: 0}}
+                              animate={{y: 0, opacity: 1, transition: {ease: "easeIn", delay: .5}}} className='contactHeader__wrapper-item--text-link'
+                       href="mailto:example@example.com">example@example.com</motion.a>
                 </div>
                 <div className='contactHeader__wrapper-item--form'>
                     {isSend ?
-                        <form className='contactHeader__form'>
+                        <motion.form initial={{x: "100px", opacity: 0}}
+                                     animate={{x: 0, opacity: 1, transition: {ease: "easeIn", delay: .5}}} className='contactHeader__form'>
                             <div className='contactHeader__form-input'>
                                 <label htmlFor="name">Name</label>
                                 <input onfocusout={e=>setName(e.target.value)} onMouseLeave={e=>setName(e.target.value)} id='name' type="text" placeholder={'Enter your name'}/>
@@ -79,7 +85,7 @@ function ContactHeader() {
                                 <textarea onfocusout={e=>setText(e.target.value)} onMouseLeave={e=>setText(e.target.value)} rows={5} maxLength={500} id='area' placeholder='Enter your email'/>
                             </div>
                             <Button onClick={(e) => Send(e)} children={'Submit Form'}/>
-                        </form>
+                        </motion.form>
                         : <div className='response'>
                             <h1 className='response__title'>Thank you!</h1>
                             <p className='response__descr'>Your submisson has been recieved!</p>

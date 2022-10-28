@@ -8,6 +8,10 @@
   transition: all .3s ease-in-out;
   font-family: 'Lora', serif;
 }
+
+*::selection{
+  background: transparent;
+}
 body {
   margin: 0;
   background-color: black;

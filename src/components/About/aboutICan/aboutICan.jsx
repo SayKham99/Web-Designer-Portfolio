@@ -1,6 +1,7 @@
 import React from 'react';
-import Container from "../../usable/Container/Container";
+import {Container} from "../../usable/Container/Container";
 import './aboutICan.scss'
+import {motion} from "framer-motion";
 
 const ican = [
     {
@@ -35,22 +36,59 @@ const ican = [
     },
 ]
 
+const titleVariant = {
+    hidden: {
+        y: 50, opacity: 0
+    }, visible: {
+        y: 0, opacity: 1, trasition: {
+            delay: .5
+        }
+    }
+}
+
+const textVariant = {
+    hidden: {
+        y: 50, opacity: 0
+    }, visible: custom => ({
+        y: 0, opacity: 1, transition: {
+            delay: (custom * .2),
+            duration: .3
+        }
+    })
+}
+
 function AboutICan() {
     return (
         <div className='aboutICan'>
             <Container className={'-xs'}>
-                <div className='aboutICan__wrapper'>
-                    <h1 className='aboutICan__wrapper-title'>Here’s what I can <br/> do to help:</h1>
+                <motion.div
+                    initial={"hidden"}
+                    whileInView={"visible"}
+                    viewport={{amount: .5, once: true}}
+                    className='aboutICan__wrapper'
+                >
+                    <motion.h1 variants={titleVariant} className='aboutICan__wrapper-title'>Here’s what I can <br/> do
+                        to help:
+                    </motion.h1>
                     <div className='aboutICan__wrapper-items'>
                         {ican.map(can => {
                             const {id, title, description} = can
-                            return (<div key={id} className='aboutICan__wrapper-items--item'>
-                                <p className='item__title'>{title}</p>
-                                <p className='item__descr'>{description}</p>
-                            </div>)
+                            return (
+                                <motion.div
+                                    initial={"hidden"}
+                                    whileInView={"visible"}
+                                    viewport={{amount: .7, once: true}}
+                                    key={id}
+                                    className='aboutICan__wrapper-items--item'>
+                                    <motion.p variants={textVariant} custom={id + 1}
+                                              className='item__title'>{title}</motion.p>
+                                    <motion.p variants={textVariant} custom={id + 2}
+                                              className='item__descr'>{description}</motion.p>
+                                </motion.div>
+                            )
                         })}
                     </div>
-                </div>
+                </motion.div>
             </Container>
         </div>
     );

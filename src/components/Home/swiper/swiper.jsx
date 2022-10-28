@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {Swiper, SwiperSlide} from "swiper/react";
 import photo1 from "../../../assets/images/pic1.jpg";
 import photo2 from "../../../assets/images/pic2.jpg";
@@ -18,7 +18,8 @@ import "swiper/css/pagination";
 import "./swiper.scss";
 
 // import required modules
-import {Navigation, Pagination,Autoplay} from "swiper";
+import {Navigation, Pagination, Autoplay} from "swiper";
+import {motion} from "framer-motion";
 
 const data = [{
     id: 1,
@@ -78,26 +79,41 @@ const data = [{
 
 
 function SwiperCarousel() {
-
+    const ref = useRef()
+    useEffect(() => {
+        if (ref.current === "swiper-slide") {
+            console.log('active')
+        }
+    }, [])
     return (<header className='carousel'>
         <div className='carousel__wrapper'>
-            <Swiper autoplay={{delay:1000}} loop={true} pagination={{clickable: true}} navigation={true} modules={[Navigation, Pagination,Autoplay]}
-                    className="mySwiper">
+            <Swiper autoplay={{delay: 3000}} loop={true} pagination={{clickable: true}} navigation={true}
+                    modules={[Navigation, Pagination, Autoplay]}>
                 {data.map(items => {
                     const {title, type, image, id, description} = items;
-                    return (<SwiperSlide>
-                        <div className='carousel__wrapper-item' key={id}>
-                            <div className='carousel__wrapper-item--text'>
-                                <h1 className='carousel__wrapper-item--text-title'>{title}</h1>
-                                <p className='carousel__wrapper-item--text-type'>{type}</p>
-                                <p className='carousel__wrapper-item--text-descr'>{description}</p>
+                    return (
+                        <SwiperSlide ref={ref}>
+                            <div className='carousel__wrapper-item' key={id}>
+                                <div className='carousel__wrapper-item--text'>
+                                    <motion.h1 initial={{y: "-30px", opacity: 0}}
+                                               animate={{y: 0, opacity: 1, transition: {ease: "easeIn", delay: .5}}}
+                                               className='carousel__wrapper-item--text-title'>{title}</motion.h1>
+                                    <motion.p initial={{x: "-50px", opacity: 0}}
+                                              animate={{x: 0, opacity: 1, transition: {ease: "easeIn", delay: .5}}}
+                                              className='carousel__wrapper-item--text-type'>{type}</motion.p>
+                                    <motion.p initial={{y: "30px", opacity: 0}}
+                                              animate={{y: 0, opacity: 1, transition: {ease: "easeIn", delay: .5}}}
+                                              className='carousel__wrapper-item--text-descr'>{description}</motion.p>
+                                </div>
+                                <div className='carousel__wrapper-item--image'>
+                                    <motion.img initial={{x: "100px", opacity: 0}}
+                                                animate={{x: 0, opacity: 1, transition: {ease: "easeIn", delay: .5}}}
+                                                src={image} alt={'image ' + title}
+                                                className='carousel__wrapper-item--image-img'/>
+                                </div>
                             </div>
-                            <div className='carousel__wrapper-item--image'>
-                                <img src={image} alt={'image ' + title}
-                                     className='carousel__wrapper-item--image-img'/>
-                            </div>
-                        </div>
-                    </SwiperSlide>)
+                        </SwiperSlide>
+                    )
                 })}
             </Swiper>
         </div>

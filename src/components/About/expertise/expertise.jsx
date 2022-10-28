@@ -1,7 +1,9 @@
 import React from 'react';
-import Container from "../../usable/Container/Container";
+import {Container} from "../../usable/Container/Container";
 import bg from '../../../assets/images/bg.jpg'
 import './expertise.scss'
+import {motion} from "framer-motion";
+
 const ican = [{
     id: 1,
     title: 'Motion Graphics.',
@@ -20,25 +22,60 @@ const ican = [{
     description: 'If you have a team ready to dive into the world of Motion Graphics, I would be delighted to help.'
 },]
 
+const titleVariant = {
+    hidden: {
+        y: 50, opacity: 0
+    }, visible: {
+        y: 0, opacity: 1, trasition: {
+            delay: .5
+        }
+    }
+}
+
+const textVariant = {
+    hidden: {
+        y: 50, opacity: 0
+    }, visible: custom => ({
+        y: 0, opacity: 1, transition: {
+            delay: (custom * .2),
+            duration: .3
+        }
+    })
+}
+
 function Expertise() {
     return (
-        <div className='expertise'>
+        <motion.div
+            initial={"hidden"}
+            whileInView={"visible"}
+            viewport={{amount: .2, once: true}}
+            className='expertise'
+        >
             <Container className={'-xs'}>
-                <h1 className='expertise__title'>Know more about <br/>my expertise.</h1>
+                <motion.h1 variants={titleVariant} className='expertise__title'>Know more about <br/>my expertise.
+                </motion.h1>
                 <div className='expertise__wrapper'>
                     <img src={bg} alt={bg} className='expertise__wrapper-image'/>
                     <div className='expertise__wrapper-items'>
                         {ican.map(can => {
                             const {id, title, description} = can
-                            return (<div key={id} className='expertise__wrapper-items--item'>
-                                <p className='item__title'>{title}</p>
-                                <p className='item__descr'>{description}</p>
-                            </div>)
+                            return (
+                                <motion.div
+                                    initial={"hidden"}
+                                    whileInView={"visible"}
+                                    viewport={{amount: .8, once: true}}
+                                    key={id}
+                                    className='expertise__wrapper-items--item'
+                                >
+                                    <motion.p variants={textVariant} custom={id + 1} className='item__title'>{title}</motion.p>
+                                    <motion.p variants={textVariant} custom={id + 2} className='item__descr'>{description}</motion.p>
+                                </motion.div>
+                            )
                         })}
                     </div>
                 </div>
             </Container>
-        </div>
+        </motion.div>
     );
 }
 

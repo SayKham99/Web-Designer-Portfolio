@@ -1,7 +1,8 @@
 import React from 'react';
-import Container from "../../usable/Container/Container";
+import {Container} from "../../usable/Container/Container";
 import photo1 from "../../../assets/images/pic3.jpg";
 import './aboutHeader.scss'
+import {motion} from 'framer-motion'
 const data = [{
     id: 1,
     title: 'Global Academy',
@@ -18,12 +19,12 @@ function AboutHeader() {
                 return (
                     <div className='workHeader__wrapper-item' key={id}>
                         <div className='workHeader__wrapper-item--text'>
-                            <h1 className='workHeader__wrapper-item--text-title'>{title}</h1>
-                            <p className='workHeader__wrapper-item--text-type'>{type}</p>
-                            <p className='workHeader__wrapper-item--text-descr'>{description}</p>
+                            <motion.h1 initial={{y:"-30px",opacity:0}} animate={{y:0,opacity:1,transition:{ease:"easeIn",delay:.5}}} className='workHeader__wrapper-item--text-title'>{title}</motion.h1>
+                            <motion.p  initial={{x:"-50px",opacity:0}} animate={{x:0,opacity:1,transition:{ease:"easeIn",delay:.5}}} className='workHeader__wrapper-item--text-type'>{type}</motion.p>
+                            <motion.p initial={{y:"30px",opacity:0}} animate={{y:0,opacity:1,transition:{ease:"easeIn",delay:.5}}} className='workHeader__wrapper-item--text-descr'>{description}</motion.p>
                         </div>
                         <div className='workHeader__wrapper-item--image'>
-                            <img src={image} alt={'image ' + title}
+                            <motion.img initial={{x:"100px",opacity:0}} animate={{x:0,opacity:1,transition:{ease:"easeIn",delay:.5}}} src={image} alt={'image ' + title}
                                  className='workHeader__wrapper-item--image-img'/>
                         </div>
                     </div>

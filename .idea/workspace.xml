@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="30f5f416-6902-46ac-bc4b-c4c0cfa31fc0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/usable/ScrollTop/Scroll.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useDimension.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/About/aboutICan/aboutICan.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About/aboutICan/aboutICan.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/About/expertise/expertise.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About/expertise/expertise.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/About/header/aboutHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About/header/aboutHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Blog/header/blogHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Blog/header/blogHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Blog/posts/posts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Blog/posts/posts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Blog/posts/posts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Blog/posts/posts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact/contactHeader/contactHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/contactHeader/contactHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/iCan/iCan.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/iCan/iCan.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/smallAbout/about.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/smallAbout/about.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/swiper/swiper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/swiper/swiper.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Work/header/workHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Work/header/workHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Work/projects/projects.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Work/projects/projects.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Work/projects/projects.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Work/projects/projects.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/usable/Container/Container.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/usable/Container/Container.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/usable/Footer/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/usable/Footer/footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/usable/card/card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/usable/card/card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/usable/icon/icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/usable/icon/icon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/usable/navbar/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/usable/navbar/navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/usable/navbar/navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/usable/navbar/navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/usable/partners/partners.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/usable/partners/partners.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GfEE9XdAcIbKfpOUb7rR1m2xHF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/x5292/WebstormProjects/carousel/src/components/usable&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\x5292\WebstormProjects\carousel\src\components\usable" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30f5f416-6902-46ac-bc4b-c4c0cfa31fc0" name="Changes" comment="" />
+      <created>1666771127200</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666771127200</updated>
+      <workItem from="1666771129464" duration="11628000" />
+      <workItem from="1666852554848" duration="5076000" />
+      <workItem from="1666890110540" duration="288000" />
+      <workItem from="1666890496174" duration="465000" />
+      <workItem from="1666909010374" duration="1843000" />
+      <workItem from="1666970240229" duration="4301000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

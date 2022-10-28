@@ -1,12 +1,13 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import './Container.scss'
+import {motion} from "framer-motion";
 
-function Container({children, className}) {
+export const Container = forwardRef(({children, className}, ref) => {
     if (className !== undefined) {
-        return <div className={'container' + className}>{children}</div>
+        return <div className={'container' + className} ref={ref}>{children}</div>
     } else {
-        return <div className={'container'}>{children}</div>
+        return <div className={'container'} ref={ref}>{children}</div>
     }
-}
+})
 
-export default Container
+export const MContainer = motion(Container)

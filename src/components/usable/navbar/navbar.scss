@@ -1,7 +1,6 @@
 .navbar {
   margin: 0 auto;
   width: 100%;
-  background-color: transparent;
   z-index: 2;
   min-width: 375px;
 
@@ -11,8 +10,7 @@
     align-items: center;
 
     &-logo {
-      color: white;
-      mix-blend-mode: difference;
+      color:white;
       font-size: 20px;
       font-weight: 600;
       z-index: 3;
@@ -40,6 +38,8 @@
     }
 
     .hamburger {
+      position: fixed;
+      top: 0;
       color: black;
       justify-content: center;
       align-items: center;
@@ -51,6 +51,10 @@
         justify-content: space-between;
         align-items: center;
         gap: 100px;
+
+        .active {
+          text-decoration: line-through;
+        }
 
         &-list {
           width: 45%;
@@ -114,8 +118,4 @@
       }
     }
   }
-}
-
-.active{
-  text-decoration: line-through;
 }

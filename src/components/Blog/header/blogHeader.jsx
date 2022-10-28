@@ -1,8 +1,10 @@
 import React from 'react';
-import Container from "../../usable/Container/Container";
+import {Container} from "../../usable/Container/Container";
 import photo1 from "../../../assets/images/pic1.jpg";
 import './blogHeader.scss'
 import Button from "../../usable/button/button";
+import {motion} from 'framer-motion'
+
 const data = [{
     id: 1,
     title: 'Global Academy',
@@ -19,14 +21,25 @@ function BlogHeader() {
                 return (
                     <div className='blogHeader__wrapper-item' key={id}>
                         <div className='blogHeader__wrapper-item--image'>
-                            <img src={image} alt={'image ' + title}
-                                 className='blogHeader__wrapper-item--image-img'/>
+                            <motion.img initial={{x: "100px", opacity: 0}}
+                                        animate={{x: 0, opacity: 1, transition: {ease: "easeIn", delay: .5}}} src={image}
+                                        alt={'image ' + title}
+                                        className='blogHeader__wrapper-item--image-img'/>
                         </div>
                         <div className='blogHeader__wrapper-item--text'>
-                            <p className='blogHeader__wrapper-item--text-type'>{type}</p>
-                            <h1 className='blogHeader__wrapper-item--text-title'>{title}</h1>
-                            <p className='blogHeader__wrapper-item--text-descr'>{description}</p>
-                            <Button textcolor={true} url={'/blog'} children={'Read Article'}/>
+                            <motion.p initial={{x: "-50px", opacity: 0}}
+                                      animate={{x: 0, opacity: 1, transition: {ease: "easeIn", delay: .5}}}
+                                      className='blogHeader__wrapper-item--text-type'>{type}</motion.p>
+                            <motion.h1 initial={{y: "-30px", opacity: 0}}
+                                       animate={{y: 0, opacity: 1, transition: {ease: "easeIn", delay: .5}}}
+                                       className='blogHeader__wrapper-item--text-title'>{title}</motion.h1>
+                            <motion.p initial={{y: "30px", opacity: 0}}
+                                      animate={{y: 0, opacity: 1, transition: {ease: "easeIn", delay: .5}}}
+                                      className='blogHeader__wrapper-item--text-descr'>{description}</motion.p>
+                            <motion.div initial={{y: "30px", opacity: 0}}
+                                        animate={{y: 0, opacity: 1, transition: {ease: "easeIn", delay: .5}}}>
+                                <Button textcolor={true} url={'/blog'} children={'Read Article'}/>
+                            </motion.div>
                         </div>
                     </div>
                 )
